@@ -54,8 +54,6 @@ a {
 }
 
 
-
-
 .links li {
     margin: 20px;
 }
@@ -68,7 +66,7 @@ a {
     position: absolute;
     left: 0;
     bottom: -5px;
-    background-color: #f9ad4a;    /* Sous lignage des titres */
+    background-color: #f9ad4a;
     height: 4px;
     width: 0%;
     border-radius: 4px;
@@ -128,106 +126,14 @@ details p {
     display: flex;
 }
 
-/* COLONNE GAUCHE IMAGE */
-/* ===== SIDEBAR MENU ===== */
-.sidebar {
-    background: linear-gradient(#ff2d2d, #d81f1f);
-    color: white;
 
-    position: fixed;
-    top: 110px; /* espace sous le header */
-    left: 30px;
-
-    width: 260px;
-    height: calc(100vh - 140px);
-
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px;
-
-    overflow-y: auto;
-}
-
-/* LOGO */
-.sidebar-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.sidebar-logo i {
-    font-size: 30px;
-}
-
-.sidebar-logo h2 {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* MENU */
-.sidebar-menu {
-    margin-top: 40px;
-}
-
-.sidebar-menu li {
-    margin: 20px 0;
-}
-
-.sidebar-menu a {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: white;
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-/* HOVER */
-.sidebar-menu a:hover {
-    background: rgba(255,255,255,0.2);
-}
-
-/* ACTIVE (comme ton image) */
-.sidebar-menu .active a {
-    background: white;
-    color: #d81f1f;
-}
-
-/* ICÔNES */
-.sidebar-menu i {
-    font-size: 18px;
-}
-
-/* USER EN BAS */
-.sidebar-user {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    padding-top: 20px;
-}
-
-.sidebar-user i {
-    font-size: 40px;
-}
-
-.sidebar-user span {
-    opacity: 0.8;
-    font-size: 14px;
-}
 
 /* PARTIE DROITE */
 .main {
     margin-top: 100px;
     width: calc(70% - 20px);
     padding: 20px;
-    margin-left: 300px;  
+    margin-left: 15%;  
 }
 
 summary {
@@ -242,5 +148,15 @@ summary {
 .icon {
     width: 30px;
     height: 30px;
+    color: #f9ad4a;
+}
+
+.main h1{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.main h2{
+    text-align: center;
     color: #f9ad4a;
 }
