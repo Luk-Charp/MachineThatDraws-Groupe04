@@ -28,7 +28,7 @@ a {
 
 .home {
     min-height: 90vh;
-    background: linear-gradient(to bottom, #0A1F44, #071530); /* Dégradé de couleur sur l'image */
+    background: linear-gradient(to bottom, #0A1F44, #071530);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -78,7 +78,7 @@ a {
 
 .introduction {
     margin: 40px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 details {
@@ -128,8 +128,6 @@ details p {
 }
 
 
-
-/* PARTIE DROITE */
 .main {
     margin-top: 100px;
     width: calc(70% - 20px);
@@ -140,7 +138,7 @@ details p {
 summary {
     display: flex;
     align-items: center;
-    gap: 10px; /* espace entre logo et texte */
+    gap: 10px; 
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;

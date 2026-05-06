@@ -1,12 +1,3 @@
-
-
-
-
-// MENU BACKGROUND ON SCROLL
-
-
-
-
 window.addEventListener("scroll", function () {
   const menu = document.querySelector(".menu");
 
@@ -21,29 +12,8 @@ window.addEventListener("scroll", function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-// DETECTION DU SENS DU SCROLL
-
-
-
-
-
-
-
-
 let lastScrollY = window.scrollY;
 let scrollingDown = true;
-
-
 
 
 window.addEventListener("scroll", () => {
@@ -53,28 +23,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-// ANIMATION DES SECTIONS
-
-
-
-
-
-
-
-
 const sections = document.querySelectorAll("section:not(.home)");
-
-
 
 
 const observer = new IntersectionObserver((entries) => {
@@ -93,14 +42,11 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 
-
-
 if (window.innerWidth > 1024) {
     sections.forEach(section => {
         observer.observe(section);
     });
 } else {
-    // mobile → tout visible direct
     sections.forEach(section => {
         section.classList.add("visible");
     });

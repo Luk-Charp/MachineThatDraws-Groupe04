@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); /* Police d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
 section:not(.home) {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.6s ease; /*Pour changer la vitesse de transition en descente*/
+  transition: all 0.6s ease; 
 }
 
 
@@ -47,7 +47,7 @@ button {
 }
 .home {
     min-height: 90vh;
-    background: linear-gradient(rgba(10, 31, 68, 0.25),rgba(10, 31, 68, 0.6)), url("Assets/Paysage.jpg"); /* Dégradé de couleur sur l'image */
+    background: linear-gradient(rgba(10, 31, 68, 0.25),rgba(10, 31, 68, 0.6)), url("Assets/Paysage.jpg"); 
     background-position: center;
     background-size: cover;
     position: relative;
@@ -83,7 +83,7 @@ button {
     position: absolute;
     left: 0;
     bottom: -5px;
-    background-color: #f9ad4a;    /* Sous lignage des titres */
+    background-color: #f9ad4a;    
     height: 4px;
     width: 0%;
     border-radius: 4px;
@@ -155,7 +155,7 @@ button {
 
 .image_box{
     position: absolute;
-    bottom: -45px; /*-140px changer la position du modele 3D de haut en bas*/
+    bottom: -45px; 
     right: 10%; /*15%*/
     width: clamp(250px, 40vw, 600px);
 }
@@ -189,7 +189,7 @@ button {
     color: #f9ad4a;
     margin-right: 15px;
 }
-/* text section */
+
 .text_section{
     display: flex;
     justify-content: center;
@@ -216,7 +216,7 @@ button {
 
 
 
-/* owner */
+
 .owner{
     display: flex;
     justify-content: space-between;
@@ -301,9 +301,6 @@ button {
 
 
 
-
-
-/* background */
 .background{
     height: 70vh;
     width: 100%;
@@ -373,7 +370,7 @@ button {
 
 
 
-/* big */
+
 .big {
     margin: 290px 0 150px 0;
     /*margin-bottom: 50px;*/
@@ -385,9 +382,6 @@ button {
 .big h2 {
     font-size: 80px;
 }
-/* service*/
-
-
 
 
 .services {
@@ -395,8 +389,8 @@ button {
     text-align: center;
     margin-top: 35px;*/
     display: flex;
-    flex-wrap: wrap;          /* Permet le retour à la ligne */
-    justify-content: center;  /* Centre les éléments */
+    flex-wrap: wrap;          
+    justify-content: center;  
     text-align: center;
     margin-top: 35px;
 }
@@ -408,7 +402,7 @@ button {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0 35px 60px 35px; /* ← ajoute du bas */
+    margin: 0 35px 60px 35px; 
 }
 .services .box i {
     font-size: 40px;
@@ -440,17 +434,17 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse; /* 🔥 inverse les côtés */
+    flex-direction: row-reverse; 
 }
 
-/* gauche centré verticalement */
+
 .left {
     width: 48%;
     display: flex;
     align-items: center;
 }
 
-/* droite avec 2 blocs */
+
 .right {
     width: 48%;
     display: flex;
@@ -487,7 +481,7 @@ button {
     display: flex;
     align-items: center;
 }
-/* ranked */
+
 .ranked {
     text-align: center;
     border-top: 1px  solid #e1e1e1;
@@ -499,7 +493,7 @@ button {
 
 
 
-/*Pour essayer le responsive des logos en svg en bas de page*/
+
 .logos {
     display: flex;
     flex-wrap: wrap;
@@ -614,14 +608,14 @@ footer {
     .testimonials_content {
     flex-direction: column;
     align-items: center;
-    gap: 30px; /* 🔥 espace uniforme */
+    gap: 30px; 
 }
 
 .right {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 50px; /* garde aussi ici */
+    gap: 50px; 
 }
 
     .left,
@@ -630,38 +624,13 @@ footer {
     }
 
     .right {
-        gap: 30px; /* espace entre les 2 cartes */
+        gap: 30px; 
     }
 
     .comment {
         width: 100%;
     }    
 
-    
-
-
-    /*
-    .openbtn , .closebtn {
-        padding: 10px 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
-        border-radius: 6px;
-        background-color: #fff;
-        border: 0;
-        color: #000;
-        outline: none;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
-    .closebtn {
-        display: block;
-        position: absolute;
-        top: 28px;
-        right: 25px;
-        }
-*/
     .links{
     display: flex;
     margin-left: 15px;
@@ -737,7 +706,7 @@ footer {
     }
     .testimonials {
         flex-direction: column;
-        gap: 30px; /* espace entre les blocs */
+        gap: 30px; 
     }
     .left , .right {
         width: 100%;
