@@ -56,26 +56,6 @@ button {
 }
 
 
-.logo{
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 40px;
-    font-style: italic;
-    font-family: 'Roboto', sans-serif;
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo i{
-    font-size: 70px; /* taille du logo */
-    line-height: 1;
-}
-
-
 .menu.scrolled {
     background: linear-gradient(to bottom, #0A1F44, #071530);
 }
