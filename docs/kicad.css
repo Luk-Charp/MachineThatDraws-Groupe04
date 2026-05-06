@@ -9,7 +9,6 @@
     font-family:'Roboto', sans-serif;
 }
 
-
 .kicad-title p{
     color:#777;
     margin-top:10px;
@@ -70,8 +69,6 @@
 .kicad-card:hover{
     transform:translateY(-10px);
 }
-
-
 
 
 .kicad-card1{
