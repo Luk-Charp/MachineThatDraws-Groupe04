@@ -100,7 +100,7 @@ details p {
     text-align: justify;
 }
 
-.Objectifs, .Cahier, .Tuto, .choix, .gcode{
+.Objectifs, .Cahier, .tuto, .choix, .gcode{
     margin: 40px;
     margin-top: 10px;
 }
@@ -161,21 +161,46 @@ summary {
 }
 
 
-.cahier-liste, .choix-liste {
+.cahier-liste, .choix-liste, .tuto {
     padding-left: 0;
     list-style: none;
 }
 
-.cahier-liste li::before, .choix-liste li::before {
+.cahier-liste li::before, .choix-liste li::before, .tuto li::before {
     content: "- ";
     font-weight: bold;
     margin-right: 8px;
 }
 
-.cahier-liste li , .choix-liste li{
+.cahier-liste li , .choix-liste li, .tuto li{
     margin-top: 2px;
 }
 
 .gcode h3{
     text-align: left;
+}
+
+.repo{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 4px 1px;
+
+    border-radius: 10px;
+    color:black;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.repo:hover{
+
+    transform: translateY(-2px);
+}
+
+.repo i{
+    font-size: 12px;
 }
