@@ -100,7 +100,7 @@ details p {
     text-align: justify;
 }
 
-.Objectifs, .Cahier, .Tuto{
+.Objectifs, .Cahier, .Tuto, .choix{
     margin: 40px;
     margin-top: 10px;
 }
@@ -158,4 +158,20 @@ summary {
 .main h2{
     text-align: center;
     color: #f9ad4a;
+}
+
+
+.cahier-liste, .choix-liste {
+    padding-left: 0;
+    list-style: none;
+}
+
+.cahier-liste li::before, .choix-liste li::before {
+    content: "- ";
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.cahier-liste li , .choix-liste li{
+    margin-top: 2px;
 }
