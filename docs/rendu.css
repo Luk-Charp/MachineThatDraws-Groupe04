@@ -100,7 +100,7 @@ details p {
     text-align: justify;
 }
 
-.Objectifs, .Cahier, .Tuto, .choix{
+.Objectifs, .Cahier, .Tuto, .choix, .gcode{
     margin: 40px;
     margin-top: 10px;
 }
@@ -174,4 +174,8 @@ summary {
 
 .cahier-liste li , .choix-liste li{
     margin-top: 2px;
+}
+
+.gcode h3{
+    text-align: left;
 }

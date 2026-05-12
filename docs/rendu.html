@@ -146,6 +146,81 @@
     </details>
     </div>
 
+    <div class="gcode">
+    <details>
+        <summary>
+            <i class= "fa-solid fa-code icon"></i>
+            Logiciel de dessin 
+        </summary>
+
+        <p>
+            Le logiciel développé pour le projet Machine That Draws permet de convertir automatiquement une image en instructions
+            de déplacement exploitables par la machine de dessin. Le programme est entièrement développé en Python et utilise plusieurs
+            bibliothèques spécialisées comme OpenCV pour le traitement d'image, Tkinter pour l'interface graphique ainsi que des modules
+            personnalisés pour l'optimisation des trajets et la génération du G-code. <br> <br>
+
+            <h3>1. Chargement et traitement de l'image</h3><br>
+            Le fonctionnement du logiciel commence par la sélection d'une image depuis l'interface graphique grâce à un explorateur de fichiers 
+            Tkinter.
+            Le programme charge ensuite l'image avec la fonction "cv2.imread()"".
+            L'image est convertie en niveaux de gris avec "cv2.cvtColor()".
+            Cette conversion permet de simplifier les traitements numériques et d'améliorer les performances de détection des contours.<br> <br>
+
+            <h3>2. Détection des contours</h3><br>
+            Une fois l'image convertie, le logiciel applique l'algorithme de détection de contours de Canny avec :
+            "edges = cv2.Canny(gray, 50, 150)"
+            Les seuils (50,150) permettent d'identifier les contours principaux du dessin tout en limitant le bruit numérique présent dans l'image.
+            Les contours détectés sont ensuite récupérés grâce à cv2.findContours().
+            Cette fonction transforme les lignes détectées en ensembles de points exploitables par la machine de dessin.<br> <br>
+
+            <h3>3. Optimisation des trajets</h3><br>
+            Les contours obtenus sont ensuite optimisés dans le module "path_optimizer.py".<br>
+            Simplification des formes<br>
+            Le programme utilise la fonction "cv2.approxPolyDP()".
+            Cette méthode réduit le nombre de points nécessaires pour représenter une forme tout en conservant sa géométrie générale. Cela permet :
+            d'alléger les calculs ,
+            d'accélérer le dessin ,
+            de réduire les mouvements inutiles.<br>
+            Tri intelligent des contours<br>
+            Le logiciel trie ensuite automatiquement les contours afin que la machine dessine toujours le contour le plus proche du précédent.
+            La distance entre deux points est calculée avec :
+            "math.hypot(p1[0]-p2[0], p1[1]-p2[1])"
+            Cette optimisation réduit :
+            la distance totale parcourue ,
+            le nombre de levées de stylo ,
+            le temps global de dessin.<br><br>
+
+            <h3>4. Génération du G-code</h3><br>
+
+            Une fois les trajets optimisés, le logiciel génère automatiquement un fichier G-code dans le module "gcode_generator.py".
+            Le G-code est le langage standard utilisé pour piloter les machines CNC et les plotters.<br>
+            Commandes principales utilisées:<br> 
+            Déplacement rapide
+            G0 X10 Y20
+            Permet de déplacer rapidement la tête sans dessiner.<br>
+            Déplacement de dessin
+            G1 X50 Y40 F1200
+            Permet de dessiner une ligne avec une vitesse définie par le paramètre FEEDRATE.<br>
+            Levée et descente du stylo
+            M3 S0 -> stylo levé
+            M3 S40 -> stylo baissé. <br> 
+            Le logiciel ajoute également des pauses (G4) afin de laisser le temps mécanique au servo de déplacer correctement le stylo.<br><br>
+
+            <h3>5. Mise à l'échelle automatique</h3><br>
+
+            Le programme calcule automatiquement les dimensions du dessin afin qu'il puisse tenir dans la surface utile de la machine.
+            Les paramètres de dimensions sont définis dans le fichier "config.py" :
+            largeur de la machine ,
+            hauteur ,
+            marges de sécurité ,
+            vitesse de déplacement ,
+            paramètres du stylo.
+
+            Le logiciel applique ensuite un facteur d'échelle automatique pour conserver les proportions du dessin sans dépasser les limites physiques de la machine.
+        </p>     
+    </details>
+    </div>
+
     <div class="Tuto">
     <details>
         <summary>
