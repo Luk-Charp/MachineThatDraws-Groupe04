@@ -42,11 +42,24 @@ a {
     top: 0;
     left: 0;
     width: 100%;
+    padding: 20px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: linear-gradient(to bottom, #0A1F44, #071530);
     z-index: 1000;
+    border-bottom: 2px solid rgba(0,0,0,1);
 }
 
-
+.logo{
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
 
 
 .links{
@@ -77,8 +90,8 @@ a {
 }
 
 .introduction {
-    margin: 40px;
-    margin-top: 80px;
+    margin: 20px 0;
+    margin-top: 30px;
 }
 
 details {
@@ -86,10 +99,11 @@ details {
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 summary {
-    font-size: 24px;
+    font-size: clamp(18px, 5vw, 24px);
     font-weight: bold;
     cursor: pointer;
 }
@@ -101,7 +115,7 @@ details p {
 }
 
 .Objectifs, .Cahier, .tuto, .choix, .gcode{
-    margin: 40px;
+    margin: 20px 0;
     margin-top: 10px;
 }
 
@@ -130,9 +144,11 @@ details p {
 
 .main {
     margin-top: 100px;
-    width: calc(70% - 20px);
+    width: 100%;
+    max-width: 900px;
     padding: 20px;
-    margin-left: 15%;  
+    margin-left: auto;
+    margin-right: auto;
 }
 
 summary {
@@ -203,4 +219,102 @@ summary {
 
 .repo i{
     font-size: 12px;
+}
+
+.video {
+    margin: 20px 0;
+    margin-top: 10px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px -20px rgba(0,0,0,0.25);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .links {
+        gap: 15px;
+    }
+
+    .links li a {
+        font-size: 14px;
+    }
+
+    .main {
+        margin-top: 120px;
+        width: 95%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+
+    .introduction, .Objectifs, .Cahier, .tuto, .choix, .gcode {
+        margin: 20px 0;
+    }
+
+    details {
+        padding: 12px;
+    }
+
+    summary {
+        font-size: 20px;
+        gap: 8px;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    details p {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    .main h1 {
+        margin-top: 15px;
+        font-size: 28px;
+    }
+
+    .main h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .cahier-liste li, .choix-liste li, .tuto li {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    .repo {
+        padding: 6px;
+        font-size: 13px;
+    }
 }
